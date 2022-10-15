@@ -8,6 +8,7 @@
           <!-- <p class="card-title-desc">Provide valuable, actionable feedback to your users with HTML5 form
           validation–available in all our supported browsers.</p> -->
           <div class="row">
+            
             <div class="col-md-6">
               <div class="form-group">
                 <label for="validationCustom01">First name</label>
@@ -60,6 +61,7 @@
                   placeholder="Email" [ngClass]="{'is-invalid': submit && form.email.errors}">
                 <div *ngIf="submit && form.email.errors" class="invalid-feedback">
                   <span *ngIf="form.email.errors.required">Please provide a valid Email.</span>
+                  <span *ngIf="form.email.errors.email">Email must be a valid email address</span>
                 </div>
               </div>
             </div>
@@ -151,7 +153,18 @@
 
             <div class="row">
               
-              <div class="col-lg-3 col-md-2 col-sm-12">
+              <div *ngFor="let carType of CarType; let i=index">
+                
+                <input type="radio" value="carType.value" id="car_type_1">
+                <label class="checkbox-inline site_font_bold" style="display: inline !important;">
+                  &nbsp;{{carType.name}}&nbsp;
+                </label>
+                <!-- <label>
+                  <input type="checkbox" [value]="carType.value" (change)="onCheckboxChange($event)" />
+                  {{carType.name}}
+                </label> -->
+              </div>
+              <!-- <div class="col-lg-3 col-md-2 col-sm-12">
                 <input type="radio" value="Nissan" id="car_type_1" name="car_type" formControlName="carType1">
                 <label class="checkbox-inline site_font_bold" for="car_type_1" style="display: inline !important;">
                   Nissan
@@ -171,13 +184,12 @@
                   SUV Turbo
                 </label>
               </div>
-
               <div class="col-lg-3 col-md-3 col-sm-12">
                 <input type="radio" value="Salon Turbo" id="car_type_4" required="" name="car_type">
                 <label for="car_type_4" class="site_font_bold" style="display: inline !important;">
                   Salon Turbo
                 </label>
-              </div>
+              </div> -->
 
             </div>
 

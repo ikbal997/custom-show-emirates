@@ -37,8 +37,14 @@ export class FormsComponent implements OnInit {
   choose(){
     console.log(this.loginForm.get(["formSelect"])?.value);
 
-    if(this.loginForm.get(["formSelect"])?.value){
+    if(this.loginForm.get(["formSelect"])?.value=="f1"){
       this.route.navigate(["/form1"]);
+    }
+    if(this.loginForm.get(["formSelect"])?.value=="f2"){
+      this.route.navigate(["/form2"]);
+    }
+    if(this.loginForm.get(["formSelect"])?.value=="f3"){
+      this.route.navigate(["/form3"]);
     }
   }
 
