@@ -1,0 +1,74 @@
+<div class="home-btn d-none d-sm-block">
+    <a routerLink=""><i class="mdi mdi-home-variant h2 text-white"></i></a>
+  </div>
+  <div>
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+        <div class="col-lg-4">
+          <div class="authentication-page-content p-4 d-flex align-items-center min-vh-100">
+            <div class="w-100">
+              <div class="row justify-content-center">
+                <div class="col-lg-9">
+                  <div>
+                    <div class="text-center">
+                      <div>
+                        <a routerLink="" class="logo"><img src="assets/images/logo-dark.png" height="20" alt="logo"></a>
+                      </div>
+  
+                      <h4 class="font-size-18 mt-4">{{'Welcome'|translate}}</h4>
+                      <p class="text-muted">{{'Please choose for register'|translate}}</p>
+                    </div>
+  
+                    <div class="p-2 mt-5">
+                      <form class="form-horizontal" [formGroup]="loginForm">
+                        <!-- <ngb-alert type="danger" *ngIf="error" [dismissible]="false">{{ error }}</ngb-alert> -->
+                        <div class="col-md-12">
+                            <div class="form-group"> 
+                                <label class="control-label text-muted font-size-16 p-2 ">
+                                  {{'Choose your languages' |translate}}</label> 
+                                <select class="form-control select2" (change)="onChange($event)">
+                                    <option value="en">English</option>
+                                    <option value="ar">Arabic</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                              <label class="control-label text-muted font-size-16 p-2" >{{'Choose the form'|translate}}</label>
+                              <select class="form-control select2" formControlName="formSelect">
+                                <option value="f1">Form1</option>
+                                <option value="f2">Form2</option>
+                                <option value="f3">Form3</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="mt-4 text-center">
+                            <button class="btn btn-danger w-md waves-effect waves-light" type="submit"
+                            (click)="choose()">{{'Save'|translate}}</button>
+                          </div>
+    
+                        
+                      </form>
+                    </div>
+  
+                    <div class="mt-5 text-center">
+                      <p>© 2022 Milano.</p>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="authentication-bg">
+            <img src="../../../assets/images/authentication-bg.jpg">
+            <div class="bg-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end page -->

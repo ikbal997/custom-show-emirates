@@ -1,0 +1,497 @@
+<div class="col-lg-12">
+  <form class="needs-validation" (ngSubmit)="validSubmit()" [formGroup]="validationforms">
+
+    <div class="row">
+      <div class="card col-lg-6 col-xl-6 col-xs-12 col-md-12 mt-3 mx-2 ">
+        <div class="card-body">
+          <h4 class="card-title">{{'Personal Info'|translate}}</h4>
+          <!-- <p class="card-title-desc">Provide valuable, actionable feedback to your users with HTML5 form
+          validation–available in all our supported browsers.</p> -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="validationCustom01">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" formControlName="firstName"
+                  placeholder="First name" [ngClass]="{'is-invalid': submit && form.firstName.errors}">
+                  <div *ngIf="submit && form.firstName.errors" class="invalid-feedback">
+                    <span *ngIf="form.firstName.errors.required">Please provide a valid First Name.</span>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="validationCustom02">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" formControlName="lastName"
+                  placeholder="Last name" [ngClass]="{'is-invalid': submit && form.lastName.errors}">
+                  <div *ngIf="submit && form.lastName.errors" class="invalid-feedback">
+                    <span *ngIf="form.lastName.errors.required">Please provide a valid Last Name.</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="validationCustom03">Contact No:</label>
+                <input type="text" class="form-control" id="validationCustom03" formControlName="contact"
+                  placeholder="Contact No" [ngClass]="{'is-invalid': submit && form.contact.errors}">
+                <div *ngIf="submit && form.contact.errors" class="invalid-feedback">
+                  <span *ngIf="form.contact.errors.required">Please provide a valid Contact No.</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="validationCustom04">Identity Card Number:</label>
+                <input type="text" class="form-control" id="validationCustom04" formControlName="identity"
+                  placeholder="Identity Card Number" [ngClass]="{'is-invalid': submit && form.identity.errors}">
+                <div *ngIf="submit && form.identity.errors" class="invalid-feedback">
+                  <span *ngIf="form.identity.errors.required">Please provide a valid Identity Card Number.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="validationCustom05">Email</label>
+                <input type="text" class="form-control" id="validationCustom05" formControlName="email"
+                  placeholder="Email" [ngClass]="{'is-invalid': submit && form.email.errors}">
+                <div *ngIf="submit && form.email.errors" class="invalid-feedback">
+                  <span *ngIf="form.email.errors.required">Please provide a valid Email.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="validationCustom06">Country</label>
+                <select class="form-control select2" id="validationCustom06" formControlName="country"
+                [ngClass]="{'is-invalid': submit && form.country.errors}">
+                  <option value="f1">Form1</option>
+                  <option value="f2">Form2</option>
+                  <option value="f3">Form3</option>
+                </select>
+                <!-- <input type="text" class="form-control" id="validationCustom03" formControlName="city"
+                  placeholder="City" [ngClass]="{'is-invalid': submit && form.city.errors}"> -->
+                <div *ngIf="submit && form.country.errors" class="invalid-feedback">
+                  <span *ngIf="form.country.errors.required">Please provide a valid Country.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="validationCustom07">City</label>
+                <input type="text" class="form-control" id="validationCustom07" formControlName="city"
+                  placeholder="City" [ngClass]="{'is-invalid': submit && form.city.errors}">
+                <div *ngIf="submit && form.city.errors" class="invalid-feedback">
+                  <span *ngIf="form.city.errors.required">Please provide a valid city.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="validationCustom08">Address</label>
+                <input type="text" class="form-control" id="validationCustom08" formControlName="address"
+                  placeholder="Address" [ngClass]="{'is-invalid': submit && form.city.errors}">
+                <div *ngIf="submit && form.address.errors" class="invalid-feedback">
+                  <span *ngIf="form.address.errors.required">Please provide a valid Address.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-xl-5  col-xs-12">
+        <div class="card col-12 mt-3 mx-1">
+          <div class="card-body">
+            <h4 class="card-title">{{'Vehicle data'|translate}}</h4>
+            <!-- <p class="card-title-desc">Provide valuable, actionable feedback to your users with HTML5 form
+            validation–available in all our supported browsers.</p> -->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="validationCustom09">Category</label>
+                  <input type="text" class="form-control" id="validationCustom09" formControlName="category"
+                    placeholder="Category" [ngClass]="{'is-invalid': submit && form.category.errors}">
+                  <div *ngIf="submit && form.category.errors" class="invalid-feedback">
+                    <span *ngIf="form.category.errors.required">Please provide a valid Category.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="validationCustom10">Model</label>
+                  <input type="text" class="form-control" id="validationCustom10" formControlName="model"
+                    placeholder="Model" [ngClass]="{'is-invalid': submit && form.model.errors}">
+                  <div *ngIf="submit && form.model.errors" class="invalid-feedback">
+                    <span *ngIf="form.model.errors.required">Please provide a valid Model.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="validationCustom11">Club / workshop</label>
+                  <input type="text" class="form-control" id="validationCustom11" formControlName="club"
+                    placeholder="Club / workshop" [ngClass]="{'is-invalid': submit && form.club.errors}">
+                  <div *ngIf="submit && form.club.errors" class="invalid-feedback">
+                    <span *ngIf="form.club.errors.required">Please provide a valid Club / workshop.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              
+              <div class="col-lg-3 col-md-2 col-sm-12">
+                <input type="radio" value="Nissan" id="car_type_1" name="car_type" formControlName="carType1">
+                <label class="checkbox-inline site_font_bold" for="car_type_1" style="display: inline !important;">
+                  Nissan
+                </label>
+
+              </div>
+              <div class="col-lg-3 col-md-2 col-sm-12">
+                <input type="radio" value="Station" id="car_type_2" name="car_type">
+                <label class="checkbox site_font_bold" for="car_type_2" style="display: inline !important;">
+                  Station
+                </label>
+
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-12">
+                <input type="radio" value="SUV Turbo" id="car_type_3" required="" name="car_type">
+                <label class="checkbox site_font_bold" for="car_type_3" style="display: inline !important;">
+                  SUV Turbo
+                </label>
+              </div>
+
+              <div class="col-lg-3 col-md-3 col-sm-12">
+                <input type="radio" value="Salon Turbo" id="car_type_4" required="" name="car_type">
+                <label for="car_type_4" class="site_font_bold" style="display: inline !important;">
+                  Salon Turbo
+                </label>
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+        <div class="card col-12 mt-1 mx-2">
+          <div class="card-body">
+            <h4 class="card-title">{{'Participation day'|translate}}</h4>
+            <br>
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-12  ">
+                <label class="checkbox site_font_bold" for="thursday">
+                  <input type="radio" name="participation_day" required="" id="thursday" value="Thursday">Thursday
+                </label>
+                <br>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12  ">
+                <label class="checkbox site_font_bold" for="friday">
+                  <input type="radio" name="participation_day" required="" id="friday" value="Friday">Friday
+                </label>
+                <br>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12  ">
+                <label class="checkbox site_font_bold" for="saturday">
+                  <input type="radio" name="participation_day" required="" id="saturday" value="Saturday">Saturday
+                </label>
+                <br>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card col-lg-6 col-xl-6 col-xs-12 col-md-12 mt-1 mx-2 ">
+        <div class="card-body">
+          <h4 class="card-title">{{'Upload Documents'|translate}}</h4>
+          <div class="row">
+            <div class="col-lg-6 col-xl-4 col-sm-12 col-md-6 col-xs-12 mt-2 text-start">
+              <button class="btn btn-danger w-md waves-effect waves-light" type="submit">{{'Upload a Vehicle
+                photo'|translate}}</button>
+            </div>
+
+            <div class="col-lg-6 col-xl-4 col-sm-12 col-md-6 col-xs-12 mt-2 text-start">
+              <button class="btn btn-danger w-md waves-effect waves-light" type="submit">{{'Upload driver\'s
+                license'|translate}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card col-lg-5 col-xl-5 col-xs-12 col-md-12 mt-1 mx-2 ">
+        <div class="card-body">
+          <h4 class="card-title">{{'Payment Type'|translate}}</h4>
+          <div class="row">
+            <div class="col-lg-5 col-md-6 rtl-text">
+              <input type="radio" name="payment_method" value="Bank transfer" required="" id="payment_method_1">
+              <label for="payment_method_1" class="radio-lable">Bank transfer</label>
+              <div *ngIf="payment_method_selected" class="bank_table" style="direction: rtl; display: block;">
+
+                <br>
+
+                <table class="bank_details" width="100%" style="direction: rtl; text-align: center !important; ">
+
+                  <tbody>
+                    <tr>
+                      <td class="site_font_bold display_block_on_mobile arabic-title">مصرف الإمارات الاسلامي </td>
+                      <td class="display_block_on_mobile"></td>
+                      <td class="site_font_bold display_block_on_mobile english_td" style="direction: ltr;">Emirates
+                        Islamic Bank</td>
+                    </tr>
+                    <tr>
+                      <td class="site_font_bold display_block_on_mobile arabic-title">رقم الحساب:</td>
+                      <td class="site_font_bold display_block_on_mobile">3707675222401</td>
+                      <td class="site_font_bold display_block_on_mobile english_td" style="direction: ltr;">Account
+                        Number:</td>
+                    </tr>
+                    <tr>
+                      <td class="site_font_bold display_block_on_mobile arabic-title">اسم الحساب:</td>
+                      <td class="site_font_bold display_block_on_mobile" style="direction: ltr;">CUSTOM EVENTS
+                        LLC<br>-CUSTOM EVENTS L</td>
+                      <td class="site_font_bold display_block_on_mobile english_td" style="direction: ltr;">Account
+                        Name:</td>
+                    </tr>
+                    <tr>
+                      <td class="site_font_bold display_block_on_mobile arabic-title">رقم الحساب المصرفي الدولي:</td>
+                      <td class="site_font_bold display_block_on_mobile" style="direction: ltr;">AE750340003707675222401
+                      </td>
+                      <td class="site_font_bold display_block_on_mobile english_td" style="direction: ltr;">IBAN:</td>
+                    </tr>
+                    <tr>
+                      <td class="site_font_bold display_block_on_mobile arabic-title">نوع الحساب:</td>
+                      <td class="site_font_bold display_block_on_mobile" style="direction: ltr;">CURRENT ACCOUNT</td>
+                      <td class="site_font_bold display_block_on_mobile english_td" style="direction: ltr;">Account
+                        Type:</td>
+                    </tr>
+
+                    <tr class="btn-coll">
+                      <td colspan="3" style="text-align: center;">
+                        <input type="file" name="payment_receipt" id="payment_check" style="display: none;">
+                        <button type="button"
+                          class="btn btn-info btn-lg btn btn-primary py-2 px-4 site_font_bold btn-click new_ntn"
+                          onclick="payment_check_file()" style="width: 400px; ">Click here to upload the payment
+                          receipt</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--bank_table-->
+            </div>
+
+            <div class="col-lg-5 col-md-6 rtl-text">
+              <input type="radio" name="payment_method" value="credit card" required="" id="payment_method_2">
+              <label for="payment_method_2" class="radio-lable">Pay by credit card </label>
+              <div class="cridt-card" style="display: none;">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="card col-lg-6 col-xl-6 col-xs-12 col-md-12 mt-1 mx-2 ">
+        <div class="card-body">
+          <h4 class="card-title">{{'declaration cum undertaking'|translate}}</h4>
+          <p>I hereby agree that this release agreement and disclaimer of liability and risk declaration (referred to as
+            “assignment” extends to all cases of negligence on the part of assignees, including negligence in rescue
+            operations).
+            I agree to respect the rules of Custom Show competition and respect the authority of both management and
+            employees in all cases.
+            I have read and understood this waiver, and I understood that I had waived my basic rights with my signature
+            and that I did so with my personal freedom and willingness and intent that this be a waiverThe location
+            including.:</p>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="validationCustom05">Participant Name</label>
+                <input type="text" class="form-control" id="validationCustom05" formControlName="participantName"
+                  placeholder="Participant Name" [ngClass]="{'is-invalid': submit && form.participantName.errors}">
+                <div *ngIf="submit && form.participantName.errors" class="invalid-feedback">
+                  <span *ngIf="form.participantName.errors.required">Please provide a valid Participant Name.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="validationCustom05">In case of any emergency, please contact</label>
+                <input type="text" class="form-control" id="validationCustom05" formControlName="emergency"
+                  placeholder="Emergency Contact" [ngClass]="{'is-invalid': submit && form.emergency.errors}">
+                <div *ngIf="submit && form.emergency.errors" class="invalid-feedback">
+                  <span *ngIf="form.emergency.errors.required">Please provide a valid Emergency Contact.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5 col-xl-5 col-xs-12 col-md-12 mt-1 mx-2">
+        <div class="card  ">
+          <div class="card-body">
+            <h4 class="card-title" style="font-weight: bold; font-size:18px; color:red">Would you like to walk off the
+              plane and into a hotel room with reduced prices for the participants?</h4>
+            <p>Looking to stay near the dubai world trade centre, train station or other popular transport hubs?</p>
+            <div class="col-lg-12">
+              <div class="form-group">
+                <input type="text" name="is_need_hotel" id="is_need_hotel" class="form-control sub"
+                  style="width: 100% !important;" formControlName="needHotel"
+                   [ngClass]="{'is-invalid': submit && form.needHotel.errors}">
+                  <div *ngIf="submit && form.needHotel.errors" class="invalid-feedback">
+                    <span *ngIf="form.needHotel.errors.required">Please provide a valid Answer.</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card  ">
+          <div class="card-body">
+            <h4 class="card-title" style="font-weight: bold; font-size:18px; color:red">Would you like to rent a car
+              with reduced prices for the participants?</h4>
+            <p>Hire a car directly from the airport terminal or exhibition (Custom Show Emirates) – and start your
+              onward journey quickly and efficiently offer reliable and safe vehicle rental, from budget cars through to
+              luxury cars</p>
+            <div class="col-lg-12">
+              <div class="form-group">
+                <input type="text" name="is_need_car" id="is_need_car" class="form-control sub"
+                  style="width: 100% !important;" formControlName="needCar"
+                  [ngClass]="{'is-invalid': submit && form.needCar.errors}">
+                 <div *ngIf="submit && form.needCar.errors" class="invalid-feedback">
+                   <span *ngIf="form.needCar.errors.required">Please provide a valid Answer.</span>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card col-lg-6 col-xl-6 col-xs-12 col-md-12 mt-1 mx-2 ">
+        <div class="card-body">
+          <h4 class="card-title" style="font-weight: bold; font-size:18px;color:red;">Do you want to reserve a parking
+            space for your trailer (Alqalush)?
+          </h4>
+          <div class="row">
+            <div class="col-lg-12 pad">
+              <div class="form-group">
+                <input type="text" name="is_need_kalosa" id="is_need_kalosa" class="form-control sub"
+                  style="width: 100% !important;" formControlName="needkalosa"
+                  [ngClass]="{'is-invalid': submit && form.needkalosa.errors}">
+                 <div *ngIf="submit && form.needkalosa.errors" class="invalid-feedback">
+                   <span *ngIf="form.needkalosa.errors.required">Please provide a valid Answer.</span>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5 col-xl-5 col-xs-12 col-md-12 mt-1 mx-2">
+        <div class="card  ">
+          <div class="card-body">
+            <h4 class="card-title" style="font-weight: bold; font-size:18px;color:red;">Do you need a place to park your
+              caravan (RV)?
+
+            </h4>
+            <div class="row">
+              <div class="col-lg-12 pad">
+                <div class="form-group">
+                  <input type="text" name="is_need_rv" id="is_need_rv" class="form-control sub"
+                    style="width: 100% !important;"  formControlName="needrv"
+                    [ngClass]="{'is-invalid': submit && form.needrv.errors}">
+                   <div *ngIf="submit && form.needrv.errors" class="invalid-feedback">s
+                     <span *ngIf="form.needrv.errors.required">Please provide a valid Answer.</span>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="card col-lg-11 mt-1 mx-2 ">
+        <div class="card-body">
+          <h4 class="card-title">Important Notes
+          </h4>
+          <p>
+            1- Registration fees for Thursday of AED 600 / and AED 700 for Friday/AED 650 for Saturday.<br>
+            2- The participant has to pay a security deposit amount estimated at 1000 AED before the inspection and the
+            amount is refunded only after confirmation of no violation and non-material damage.<br>
+            3- Entry timing with the contestants from 11 am to 2 pm.<br>
+            4- Present the ID card please.<br>
+            5- Withdrawal for the freestyle show is made at 3pm.<br>
+            6- It is necessary to bring the registration receipt and the driving license and be present at the main gate
+            to receive the access card from 11 am to 2 pm .<br>
+            7- Adhere to management instructions at the event to enter the Drift Arena, and no excuse is accepted due to
+            the time restriction at the event, and in case the participant abstain to enter for any reason or/and the
+            entry time to the Drift Arena is not sufficient, please note that the participation will not be rescheduled
+            to the next day and the participation fees and deposit are not refunded.<br>
+            8- Political posters and advertising posters and posters that disgrace modesty prevent your participation at
+            the event due to non-compliance of the event management committee instructions.<br>
+            9- In the case of a request to cancel participation, must be notified by written letter no later than ten
+            days ahead the event.<br>
+            10- Please present the driving license when you enter the vehicle in the parking or to the Drift Arena.<br>
+            11- The event management has no responsibility in case the police stopped any contestant.<br>
+            12- adhere to time inside the Drift Arena and if time exceeded the deposit will not be refunded.<br>
+            13- The rider must be present in his car before the start of the race.<br>
+            14- It’s not allowed to participate in a pickup vehicle.<br>
+            15- The event management has the right to exclude the participant or change the time or place of
+            participation without prior or justified notification to the participants.<br>
+            16- A full safety kit must be provided upon the technical examination and wearing the set before entering
+            the Drift Arena.<br>
+            17- In case of violation of the terms and conditions mentioned above, the event management team has the
+            right to cancel the contestant and prevent him from participating in the future tournaments.<br>
+            18- ts mandatory to stick the participant vehicle number clearly<br>
+            19- It is strictly forbidden to smoke during or while waiting for the contestants to enter or exit. Smoking
+            is allowed only in designated areas.<br>
+            20- Respect other contestants and the public during the show and adhering to public policy, and any member
+            who violates this will be removed by the event management committee and may be banned from future
+            participation in the future. If it is necessary to acknowledge and pledge I, the undersigned, hereby declare
+            my complete responsibility for any risk related to bodily injury or death or damage to my property that may
+            arise from the event (s), whether the reason is the negligence of those assigned to them or otherwise, and I
+            acknowledge that car racing is a dangerous race.<br>
+            21- Wearing All safety clothing is a must (helmet + fire protective clothing for driving + shoes + gloves)
+            of the approved types.<br>
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="mx-2" style="color: red;">
+      Note:
+      The customer service center will contact you when you choose one of the service mentioned
+    </div>
+    <div class="row d-flex justify-content-center">
+      <button class="col-lg-2 col-xs-11 col-sm-6 mx-2 my-4 btn btn-danger">signeture here</button>
+      <button class="col-lg-2 col-xs-12 col-sm-6 mx-2 my-4 btn btn-danger w-md waves-effect waves-light" type="submit"
+     >save</button>
+    </div>
+    
+
+  </form>
+
+</div>
